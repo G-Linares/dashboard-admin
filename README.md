@@ -13,3 +13,7 @@ Method for routing used
 Auth method
 
 - https://clerk.com/
+
+State Managing zustand
+
+- https://docs.pmnd.rs/zustand/getting-started/introduction
