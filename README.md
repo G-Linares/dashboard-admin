@@ -2,18 +2,30 @@
 
 ### Links
 
-Component library used
+Built on
+
+- https://nextjs.org/docs
+
+Component library used with NExt
 
 - https://ui.shadcn.com/
-
-Method for routing used
-
-- https://nextjs.org/docs/app/building-your-application/routing/route-groups
 
 Auth method
 
 - https://clerk.com/
 
-State Managing zustand
+State managing Zustand
 
 - https://docs.pmnd.rs/zustand/getting-started/introduction
+
+Form's made with React Hook Form
+
+- https://www.react-hook-form.com/get-started
+
+ORM is prisma
+
+- https://www.prisma.io/
+
+DB hosted in Planetscale
+
+- https://app.planetscale.com/
