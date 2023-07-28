@@ -29,3 +29,11 @@ ORM is prisma
 DB hosted in Planetscale
 
 - https://app.planetscale.com/
+
+Added Axios for requests
+
+- https://axios-http.com/
+
+React-Hot-Toast for the notification toast
+
+- https://react-hot-toast.com/
