@@ -2,19 +2,22 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { Plus } from "lucide-react";
-import { Billboard } from "@prisma/client";
 
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
+import { DataTable } from "@/components/ui/data-table";
+
+import { BillboardColumns, columns } from "./columns";
 
 interface BillbordsClientProps {
-  data: Billboard[];
+  data: BillboardColumns[];
 }
 
 export const BillbordsClient: React.FC<BillbordsClientProps> = ({ data }) => {
   const router = useRouter();
   const params = useParams();
+
   return (
     <>
       <div className="flex items-center justify-between">
@@ -30,6 +33,7 @@ export const BillbordsClient: React.FC<BillbordsClientProps> = ({ data }) => {
         </Button>
       </div>
       <Separator />
+      <DataTable columns={columns} data={data} searchKey="label" />
     </>
   );
 };
