@@ -27,9 +27,9 @@ export default async function DashboardLayout({
     redirect("/");
   }
   return (
-    <>
+    <div className="mx-auto max-w-[90rem]">
       <Navbar />
       {children}
-    </>
+    </div>
   );
 }
