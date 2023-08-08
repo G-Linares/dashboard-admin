@@ -1,6 +1,6 @@
 "use client";
 
-import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
+import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
 
 // This type is used to define the shape of our data.
@@ -11,8 +11,6 @@ export type BillboardColumns = {
   label: string;
   createdAt: string;
 };
-
-const columnHelper = createColumnHelper<BillboardColumns>();
 
 export const columns: ColumnDef<BillboardColumns>[] = [
   {
