@@ -1,13 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { Plus } from "lucide-react";
+import { Braces, Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 import { DataTable } from "@/components/ui/data-table";
-import { ApiList } from "@/components/ui/api-list";
+import { ApiRouteModal } from "@/components/modals/api-route-modal";
 
 import { CategoryColumn, columns } from "./columns";
 
@@ -19,8 +20,16 @@ export const CategoryClient: React.FC<CategoryColumnProps> = ({ data }) => {
   const router = useRouter();
   const params = useParams();
 
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <>
+      <ApiRouteModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        entityName="categories"
+        entityIdName="categoryId"
+      />
       <div className="flex items-center justify-between">
         <Heading
           title={`Categories (${data.length})`}
@@ -35,9 +44,11 @@ export const CategoryClient: React.FC<CategoryColumnProps> = ({ data }) => {
       </div>
       <Separator />
       <DataTable columns={columns} data={data} searchKey="name" />
-      <Heading title="API" description="API calls for Categories" />
-      <Separator />
-      <ApiList entityName="categories" entityIdName="categoryId" />
+      <div className="flex items-center justify-center">
+        <Button onClick={() => setOpen(true)}>
+          View Categories API Routes <Braces className="h-4 w-4 ml-2" />
+        </Button>
+      </div>
     </>
   );
 };

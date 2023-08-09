@@ -17,7 +17,7 @@ export const ApiList: React.FC<ApiList> = ({ entityIdName, entityName }) => {
   const baseUrl = `${origin}/api/${params.storeId}`;
 
   return (
-    <>
+    <div className="flex flex-col gap-y-4">
       <ApiAlert
         title="GET"
         variant="public"
@@ -43,6 +43,6 @@ export const ApiList: React.FC<ApiList> = ({ entityIdName, entityName }) => {
         variant="admin"
         description={`${baseUrl}/${entityName}/{${entityIdName}}`}
       />
-    </>
+    </div>
   );
 };

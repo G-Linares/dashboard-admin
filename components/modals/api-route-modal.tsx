@@ -3,15 +3,20 @@
 import { useEffect, useState } from "react";
 
 import { Modal } from "@/components/ui/modal";
+import { ApiList } from "@/components/ui/api-list";
 
 interface ApiRouteModalProps {
   isOpen: boolean;
   onClose: () => void;
+  entityName: string;
+  entityIdName: string;
 }
 
 export const ApiRouteModal: React.FC<ApiRouteModalProps> = ({
   isOpen,
-  onClose
+  onClose,
+  entityIdName,
+  entityName
 }) => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
@@ -23,13 +28,11 @@ export const ApiRouteModal: React.FC<ApiRouteModalProps> = ({
   return (
     <Modal
       title="API Routes"
-      description="API Calls for categories."
+      description={`Here are the API URL endpoints for ${entityName}`}
       isOpen={isOpen}
       onClose={onClose}
     >
-      <div className="pt-6 space-x-2 flex items-center w-full">
-        This is a modal where the API routes will go
-      </div>
+      <ApiList entityName={entityName} entityIdName={entityIdName} />
     </Modal>
   );
 };
