@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Plus } from "lucide-react";
 
@@ -8,6 +9,7 @@ import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 import { DataTable } from "@/components/ui/data-table";
 import { ApiList } from "@/components/ui/api-list";
+import { ApiRouteModal } from "@/components/modals/api-route-modal";
 
 import { BillboardColumns, columns } from "./columns";
 
@@ -19,8 +21,11 @@ export const BillbordsClient: React.FC<BillbordsClientProps> = ({ data }) => {
   const router = useRouter();
   const params = useParams();
 
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
     <>
+      <ApiRouteModal isOpen={open} onClose={() => setOpen(false)} />
       <div className="flex items-center justify-between">
         <Heading
           title={`Billboards (${data.length})`}
@@ -38,6 +43,9 @@ export const BillbordsClient: React.FC<BillbordsClientProps> = ({ data }) => {
       <Heading title="API" description="API calls for Billboards" />
       <Separator />
       <ApiList entityName="billboards" entityIdName="billboardId" />
+      <Button onClick={() => setOpen(true)}> API Routes</Button>
     </>
   );
 };
+
+// API List must go on a modal that opens and closes, for better UX
