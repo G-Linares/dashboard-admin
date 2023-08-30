@@ -1,39 +1,33 @@
-# Admin Dashboard
+# E-Commerce Admin Side
 
-### Links
+This is the admin side for a fullstack e-commerce web application where vendors can upload, modify and delete billboards, colors, categorys and products for multiple stores. As well as to visualize sales with the dashboard.
 
-Built on
+## Preview
 
-- https://nextjs.org/docs
+![App Screenshot](https://ik.imagekit.io/glinares/sc-1.png?updatedAt=1693418012142)
 
-Component library used with NExt
+## Installation
 
-- https://ui.shadcn.com/
+Go to project directory and run (make sure you have node installed first)
 
-Auth method
+```bash
+  npm install
+  npm run dev
+```
 
-- https://clerk.com/
+## View demo
 
-State managing Zustand
+https://ecommerce-admin-gl.vercel.app/
 
-- https://docs.pmnd.rs/zustand/getting-started/introduction
+## Core Libraries Used
 
-Form's made with React Hook Form
-
-- https://www.react-hook-form.com/get-started
-
-ORM is prisma
-
-- https://www.prisma.io/
-
-DB hosted in Planetscale
-
-- https://app.planetscale.com/
-
-Added Axios for requests
-
-- https://axios-http.com/
-
-React-Hot-Toast for the notification toast
-
-- https://react-hot-toast.com/
+- [Next v13](https://nextjs.org/docs)
+- [React ](https://react.dev/)
+- [Tailwind CSS v3.2.4](https://tailwindcss.com/)
+- [Shadcn](https://ui.shadcn.com/docs)
+- [Zustand v4.4.4](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [Prisma](https://www.prisma.io/)
+- [React Hook Form](https://www.react-hook-form.com/get-started)
+- [Planestcalse MySQL DB](https://app.planetscale.com/)
+- [Clerk](https://clerk.com/)
