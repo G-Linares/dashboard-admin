@@ -4,7 +4,7 @@ This is the admin side for a fullstack e-commerce web application where vendors 
 
 ## Preview
 
-![App Screenshot](https://ik.imagekit.io/glinares/sc-1.png?updatedAt=1693418012142)
+![App Screenshot](https://ik.imagekit.io/glinares/Screenshot%202023-08-30%20120830.png?updatedAt=1693418929085)
 
 ## Installation
 
